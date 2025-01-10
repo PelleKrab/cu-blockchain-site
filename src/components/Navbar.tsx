@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { Link, useLocation } from "react-router-dom";
-import logo from '../assets/CUBoulderLogo.svg';
+import logo from '../assets/CUBlockchainLogo.svg';
 import { Transition } from "@headlessui/react"; // Optional: For smooth transitions
 
 const Navbar: React.FC = () => {
@@ -15,7 +15,6 @@ const Navbar: React.FC = () => {
   const navigation = [
     { name: "Home", path: "/" },
     { name: "About", path: "/about" },
-    { name: "Leadership", path: "/leadership" },
     { name: "Join Us", path: "/join" },
   ];
 
@@ -48,7 +47,6 @@ const Navbar: React.FC = () => {
             ))}
           </div>
 
-          {/* Mobile Menu Button */}
           <div className="flex items-center md:hidden">
             <button
               onClick={toggleMenu}
@@ -96,7 +94,6 @@ const Navbar: React.FC = () => {
         </div>
       </div>
 
-      {/* Mobile Menu */}
       <Transition
         show={isOpen}
         enter="transition ease-out duration-200 transform"
@@ -113,7 +110,7 @@ const Navbar: React.FC = () => {
                 <Link
                   key={item.name}
                   to={item.path}
-                  onClick={() => setIsOpen(false)} // Close menu on link click
+                  onClick={() => setIsOpen(false)} 
                   className={`block text-white px-3 py-2 rounded-md text-base font-medium hover:bg-cu-gold hover:text-black transition duration-300 ${
                     location.pathname === item.path
                       ? "bg-cu-gold text-black"

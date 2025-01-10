@@ -9,9 +9,14 @@ export default {
           'cu-light-gray': '#A2A4A3',
           'cu-light-black': '#101112',
         },
-      fontFamily: {
-        sans: ['"Space Grotesk"', 'sans-serif'],
-      },
+        fontFamily: {
+          sans: ['"Space Grotesk"', 'sans-serif'],
+        },
+        backgroundImage: {
+          'snowy-flatirons': "url('../assets/Flatirons_Winter_Sunrise_banner.jpg')",
+          'campus': "url('../assets/green_campus.jpg')",
+          'flatirons': "url('../assets/frosty_flatirons.jpg')",
+        },
       },
     },
   plugins: [],

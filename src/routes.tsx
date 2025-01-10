@@ -3,7 +3,7 @@ import Home from './pages/Home';
 import About from './pages/About';
 // import Leadership from './pages/Leadership';
 // import Events from './pages/Events';
-// import Join from './pages/Join';
+import Join from './pages/Join';
 
 // Define the type of the route elements
 interface RouteType {
@@ -16,5 +16,5 @@ export const routes: RouteType[] = [
   { path: '/about', element: <About /> },
   // { path: '/leadership', element: <Leadership /> },
   // { path: '/events', element: <Events /> },
-  // { path: '/join', element: <Join /> },
+  { path: '/join', element: <Join /> },
 ];
