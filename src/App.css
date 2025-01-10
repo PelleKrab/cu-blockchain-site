@@ -1,0 +1,21 @@
+:root {
+  --cu-gold: #CFB87C;
+  --cu-black: #000000;
+  --cu-light-black: #101112;
+  --cu-dark-gray: #565A5C;
+  --cu-light-gray: #A2A4A3;
+}
+
+/* Example usage */
+body {
+  background-color: var(--cu-light-gray);
+  color: var(--cu-black);
+}
+
+.header {
+  background-color: var(--cu-gold);
+}
+
+.footer {
+  background-color: var(--cu-dark-gray);
+}
