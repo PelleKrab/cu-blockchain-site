@@ -1,11 +1,19 @@
-import React from "react";
+import React, {useState} from "react";
 import ClubActivities from "../assets/club-activities.jpg";
 import JamesonPFP from "../assets/jameson_pfp.jpg";
 import PellePFP from "../assets/pelle_pfp.jpg";
 import Redacted from "../assets/redacted.png";
+import GoldArrow from "../assets/golden-left-arrow.png";
+import '../styles/animations.css';
+
 
 const About: React.FC = () => (
   <div className="flex flex-col">
+    <div className = " animate-bounceLR flex items-center justify-center rounded-full sticky bg-black left-4 top-20 w-10 h-10 z-20">
+      <img 
+      src = {GoldArrow}
+      className="w-6 h-6  "  />
+    </div>
     <div className="flex flex-col h-[30rem]">
     <section
       className="relative bg-fixed bg-[center_bottom_30%] bg-flatirons h-full flex items-center justify-center text-center px-4"
