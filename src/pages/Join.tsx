@@ -1,9 +1,18 @@
 import React from "react";
-import { Background } from "../assets/Flatirons_WInter_Sunrise_banner.jpg"
+import { Link, useLocation } from "react-router-dom";
 
+import { Background } from "../assets/Flatirons_WInter_Sunrise_banner.jpg"
+import GoldArrow from "../assets/golden-left-arrow.png";
+import '../styles/animations.css';
 const Join: React.FC = () => {
   return (
     <div className="flex flex-col">
+       <div className = " animate-bounceLR flex items-center justify-center rounded-full sticky bg-black left-4 top-20 w-10 h-10 z-20">
+            <Link to={"/"}><img 
+            src = {GoldArrow}
+            className="w-6 h-6  "  />
+            </Link>
+          </div>
       <div className = "flex flex-col h-[30rem]">
       <section
         className="relative bg-fixed bg-[center_bottom_30%] bg-flatirons h-full flex items-center justify-center text-center px-4"
