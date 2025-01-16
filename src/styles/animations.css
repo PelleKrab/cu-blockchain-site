@@ -1,0 +1,14 @@
+@keyframes bounceLR{
+    0%, 100%{
+        transform: translateX(0);
+    }
+    50%{
+        transform: translateX(5%);
+    }
+}
+.animate-bounceLR{
+    animation: bounceLR 1s infinite;
+}
+.changeArrow{
+    fill: black;
+}

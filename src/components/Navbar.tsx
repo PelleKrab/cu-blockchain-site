@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { Link, useLocation } from "react-router-dom";
 import logo from '../assets/CUBlockchainLogo.svg';
 import { Transition } from "@headlessui/react"; // Optional: For smooth transitions
-
+import {scrollToTop} from "./utils.js";
 const Navbar: React.FC = () => {
   const [isOpen, setIsOpen] = useState(false);
   const location = useLocation(); // To determine active link
@@ -10,6 +10,7 @@ const Navbar: React.FC = () => {
   const toggleMenu = () => {
     setIsOpen(!isOpen);
   };
+
 
   // Define your navigation links
   const navigation = [
@@ -31,9 +32,9 @@ const Navbar: React.FC = () => {
           </div>
 
           {/* Desktop Menu */}
-          <div className="hidden md:flex items-center space-x-6">
+          <div className="hidden md:flex items-center space-x-6 ">
             {navigation.map((item) => (
-              <Link
+              <Link onClick = {scrollToTop}
                 key={item.name}
                 to={item.path}
                 className={`text-white hover:text-cu-gold transition duration-300 ${
@@ -110,7 +111,11 @@ const Navbar: React.FC = () => {
                 <Link
                   key={item.name}
                   to={item.path}
-                  onClick={() => setIsOpen(false)} 
+                  onClick={() => {
+                    setIsOpen(false);
+                    scrollToTop();
+                    
+                  }} 
                   className={`block text-white px-3 py-2 rounded-md text-base font-medium hover:bg-cu-gold hover:text-black transition duration-300 ${
                     location.pathname === item.path
                       ? "bg-cu-gold text-black"
