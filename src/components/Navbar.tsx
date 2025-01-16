@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { Link, useLocation } from "react-router-dom";
 import logo from '../assets/CUBlockchainLogo.svg';
 import { Transition } from "@headlessui/react"; // Optional: For smooth transitions
-
+import {scrollToTop} from "./utils.js";
 const Navbar: React.FC = () => {
   const [isOpen, setIsOpen] = useState(false);
   const location = useLocation(); // To determine active link
@@ -10,10 +10,7 @@ const Navbar: React.FC = () => {
   const toggleMenu = () => {
     setIsOpen(!isOpen);
   };
-  const scrollToTop = () => {
-    window.scrollTo({top:0});
-    
-  };
+
 
   // Define your navigation links
   const navigation = [

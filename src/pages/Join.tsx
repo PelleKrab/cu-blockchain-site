@@ -1,5 +1,6 @@
 import React from "react";
 import { Link, useLocation } from "react-router-dom";
+import {scrollToTop} from "../components/utils.js";
 
 import { Background } from "../assets/Flatirons_WInter_Sunrise_banner.jpg"
 import GoldArrow from "../assets/golden-left-arrow.png";
@@ -8,7 +9,9 @@ const Join: React.FC = () => {
   return (
     <div className="flex flex-col">
        <div className = " animate-bounceLR flex items-center justify-center rounded-full sticky bg-black left-4 top-20 w-10 h-10 z-20">
-            <Link to={"/"}><img 
+            <Link 
+            onClick = {scrollToTop}
+            to={"/"}><img 
             src = {GoldArrow}
             className="w-6 h-6  "  />
             </Link>
