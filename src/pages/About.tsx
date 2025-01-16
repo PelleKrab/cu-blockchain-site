@@ -6,17 +6,18 @@ import Redacted from "../assets/redacted.png";
 
 const About: React.FC = () => (
   <div className="flex flex-col">
+    <div className="flex flex-col h-[30rem]">
     <section
-      className="relative bg-fixed bg-center bg-flatirons h-screen flex items-center justify-center text-center px-4"
+      className="relative bg-fixed bg-[center_bottom_30%] bg-flatirons h-full flex items-center justify-center text-center px-4"
     >
       <div className="absolute inset-0 bg-black opacity-50"></div>
       <div className="relative z-10">
-        <h1 className="text-4xl sm:text-5xl font-bold text-white">
+        <h1 className="text-4xl sm:text-5xl font-bold text-white"> 
           About Us
         </h1>
       </div>
     </section>
-
+    </div>
     <section className="py-16 bg-white">
       <div className="container mx-auto px-4">
         <div className="flex flex-col md:flex-row items-center">

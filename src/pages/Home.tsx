@@ -66,10 +66,10 @@ const Home: React.FC = () => (
           blockchain technology.
         </p>
         <a
-          href="/signup"
+          href="/Join"
           className="px-6 py-3 bg-black text-cu-gold font-semibold rounded-full hover:bg-gray-800 transition duration-300"
         >
-          Sign Up Now
+          Join Today
         </a>
       </div>
     </section>

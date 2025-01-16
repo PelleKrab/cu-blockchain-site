@@ -4,8 +4,9 @@ import { Background } from "../assets/Flatirons_WInter_Sunrise_banner.jpg"
 const Join: React.FC = () => {
   return (
     <div className="flex flex-col">
+      <div className = "flex flex-col h-[30rem]">
       <section
-        className="relative bg-fixed bg-center bg-flatirons h-screen flex items-center justify-center text-center px-4 top-[40%]"
+        className="relative bg-fixed bg-[center_bottom_30%] bg-flatirons h-full flex items-center justify-center text-center px-4"
       >
         <div className="absolute inset-0 bg-black opacity-50"></div>
 
@@ -13,7 +14,7 @@ const Join: React.FC = () => {
           <h1 className="text-4xl sm:text-5xl font-bold text-white">Join Us</h1>
         </div>
       </section>
-
+      </div>
       <section className="py-16 bg-white">
         <div className="container mx-auto px-4 text-center">
           <h2 className="text-3xl font-bold text-cu-gold mb-6">
