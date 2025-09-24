@@ -6,7 +6,7 @@ Built with React, Vite, and Tailwind CSS for a fast, responsive, and modern web 
 
 ---
 
-## To Contribute:
+## To Contribute
 
 If you find bugs or want to add features:
 
@@ -57,6 +57,7 @@ This will run the site locally and expose it on your local network, allowing you
 - /src: React source code (components, pages, assets)
 - vite.config.ts: Vite configuration
 - tailwind.config.js: Tailwind configuration
+- eslint.config.js: ESLint configuration
 
 ---
 
