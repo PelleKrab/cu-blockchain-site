@@ -1,14 +1,16 @@
 import React from "react";
 import ClubActivities from "../assets/club-activities.jpg";
-import JamesonPFP from "../assets/jameson_pfp.jpg";
+// import JamesonPFP from "../assets/jameson_pfp.jpg";
 import PellePFP from "../assets/pelle_pfp.jpg";
+import VamsiPFP from "../assets/vamsi_pfp.jpg";
+// import GavinPFP from "../assets/gavin_pfp.jpg";
 import Redacted from "../assets/redacted.png";
 
 const About: React.FC = () => (
   <div className="flex flex-col">
     <div className="flex flex-col h-[30rem]">
     <section
-      className="relative bg-fixed bg-[center_bottom_30%] bg-flatirons h-full flex items-center justify-center text-center px-4"
+      className="relative bg-[center_bottom_30%] bg-flatirons bg-cover bg-no-repeat h-full flex items-center justify-center text-center px-4"
     >
       <div className="absolute inset-0 bg-black opacity-50"></div>
       <div className="relative z-10">
@@ -67,23 +69,23 @@ const About: React.FC = () => (
           </div>
           <div className="bg-white p-6 rounded-lg shadow-md hover:shadow-xl transition duration-300">
             <img
-              src={ JamesonPFP }
-              alt="Jameson Bessette"
+              src={ VamsiPFP }
+              alt="Vamsi"
               className="w-24 h-24 rounded-full mx-auto"
             />
             <h3 className="text-xl font-semibold text-cu-dark-gray mt-4 text-center">
-              Jameson
+              Vamsi
             </h3>
             <p className="text-gray-600 text-center">Vice President</p>
           </div>
           <div className="bg-white p-6 rounded-lg shadow-md hover:shadow-xl transition duration-300">
             <img
               src={ Redacted }
-              alt="Nice try :)"
+              alt="Gavin"
               className="w-24 h-24 rounded-full mx-auto"
             />
             <h3 className="text-xl font-semibold text-cu-dark-gray mt-4 text-center">
-              Redacted
+              Gavin
             </h3>
             <p className="text-gray-600 text-center">Treasurer</p>
           </div>
@@ -97,7 +99,7 @@ const About: React.FC = () => (
           Our History
         </h2>
         <p className="text-cu-dark-gray text-lg max-w-3xl mx-auto">
-          Founded in 2016, the CU Blockchain Club has evolved through many to become what it is today. Over the years, we have hosted conferences, hackathons, and guest speaker events, fostering a collaborative environment where members can learn and innovate together.
+          Founded in 2014, the CU Blockchain Club has evolved through many to become what it is today. Over the years, we have hosted conferences, hackathons, and guest speaker events, fostering a collaborative environment where members can learn and innovate together.
            </p>
       </div>
     </section>
