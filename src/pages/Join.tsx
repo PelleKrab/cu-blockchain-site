@@ -6,7 +6,7 @@ const Join: React.FC = () => {
     <div className="flex flex-col">
       <div className = "flex flex-col h-[30rem]">
       <section
-        className="relative bg-fixed bg-[center_bottom_30%] bg-flatirons h-full flex items-center justify-center text-center px-4"
+        className="relative bg-[center_bottom_30%] bg-flatirons bg-cover bg-no-repeat h-full flex items-center justify-center text-center px-4"
       >
         <div className="absolute inset-0 bg-black opacity-50"></div>
 
@@ -64,7 +64,7 @@ const Join: React.FC = () => {
               </h3>
               <div className="bg-white p-6 rounded-lg shadow-md">
                 <p className="text-cu-dark-gray text-lg mb-2">
-                  <strong>Day:</strong> Every Wednesday
+                  <strong>Day:</strong> Every Monday
                 </p>
                 <p className="text-cu-dark-gray text-lg mb-2">
                   <strong>Time:</strong> 6:00 PM - 7:00 PM
