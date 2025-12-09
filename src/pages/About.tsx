@@ -103,6 +103,32 @@ const About: React.FC = () => (
            </p>
       </div>
     </section>
+
+    <section className="py-16 bg-gray-50">
+      <div className="container mx-auto px-4">
+        <h2 className="text-3xl font-bold text-center text-cu-gold mb-12">
+          Member Accomplishments
+        </h2>
+        <div className="max-w-4xl mx-auto">
+          <div className="mb-8">
+            <h3 className="text-2xl font-semibold text-cu-dark-gray mb-4">
+              Career Success
+            </h3>
+            <p className="text-cu-dark-gray text-lg">
+              Our members have secured internships and full-time offers from leading companies in tech and blockchain, including Microsoft, Coinbase, Optiver, and Galaxy Digital.
+            </p>
+          </div>
+          <div>
+            <h3 className="text-2xl font-semibold text-cu-dark-gray mb-4">
+              Hackathon Achievements
+            </h3>
+            <p className="text-cu-dark-gray text-lg">
+              At MBC, Greg earned 5th place in the Solana track. Pelle won Nethermind Sponsor Puzzles and Privy prizes.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
   </div>
 );
 
