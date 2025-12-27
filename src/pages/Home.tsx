@@ -1,76 +1,107 @@
 import React from "react";
+import "../styles/HomeDark.css";
 
 const Home: React.FC = () => (
-  <div className="flex flex-col">
-    <div className="relative bg-campus bg-fixed bg-center bg-cover h-screen">
-      <div className="absolute inset-0 bg-black opacity-50"></div>
+  <div className="home-dark-theme">
+    {/* Animated Background */}
+    <div className="animated-background">
+      <div className="gradient-sphere sphere-1"></div>
+      <div className="gradient-sphere sphere-2"></div>
+      <div className="gradient-sphere sphere-3"></div>
+    </div>
 
-      <div className="relative z-10 flex flex-col items-center justify-center h-full text-center px-4">
-        <h1 className="text-5xl md:text-6xl font-bold text-cu-gold">
-          Welcome to CU Blockchain Club
-        </h1>
-        <p className="mt-6 text-xl md:text-2xl text-white max-w-2xl mx-auto">
-          Exploring the future of technology and innovation with blockchain.
-        </p>
-        <a
-          href="#learn-more"
-          className="mt-8 inline-block px-6 py-3 bg-cu-gold text-black font-semibold rounded-full hover:bg-yellow-500 transition duration-300"
-        >
-          Learn More
-        </a>
+    {/* Hero Section */}
+    <div className="hero-dark">
+      <div className="hero-overlay"></div>
+      <div className="hero-content-dark">
+        <div className="hero-text">
+          <h1 className="hero-title-dark">
+            Welcome to <span className="gold-gradient">CU Blockchain Club</span>
+          </h1>
+          <p className="hero-subtitle-dark">
+            Exploring the future of technology and innovation with blockchain.
+          </p>
+          <a href="#learn-more" className="hero-cta-btn">
+            Learn More
+          </a>
+        </div>
       </div>
     </div>
 
-    <section id="learn-more" className="py-16 bg-white">
-      <div className="container mx-auto px-4">
-        <h2 className="text-3xl font-bold text-center text-cu-gold mb-12">
-          Discover Our Initiatives
+    {/* Initiatives Section */}
+    <section id="learn-more" className="section-dark">
+      <div className="container-dark">
+        <h2 className="section-heading-center">
+          Discover Our <span className="gold-gradient">Initiatives</span>
         </h2>
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-          {[
-            {
-              title: "Workshops",
-              description:
-                "Participate in hands-on workshops to deepen your understanding of blockchain technology.",
-            },
-            {
-              title: "Networking Events",
-              description:
-                "Connect with industry experts, entrepreneurs, and fellow enthusiasts to expand your network.",
-            },
-            {
-              title: "Hackathons",
-              description:
-                "Engage in collaborative projects and compete in hackathons to showcase your skills and creativity.",
-            },
-          ].map((initiative, index) => (
-            <div
-              key={index}
-              className="bg-gray-100 p-6 rounded-lg shadow-md hover:shadow-xl transition duration-300"
-            >
-              <h3 className="text-2xl font-semibold text-cu-dark-gray mb-4">
-                {initiative.title}
-              </h3>
-              <p className="text-gray-700">{initiative.description}</p>
-            </div>
-          ))}
+        <div className="initiatives-grid">
+          <div className="initiative-card">
+            <div className="initiative-icon">🎓</div>
+            <h3 className="initiative-title">Workshops</h3>
+            <p className="initiative-description">
+              Participate in hands-on workshops to deepen your understanding of blockchain technology.
+            </p>
+          </div>
+          <div className="initiative-card">
+            <div className="initiative-icon">🤝</div>
+            <h3 className="initiative-title">Networking Events</h3>
+            <p className="initiative-description">
+              Connect with industry experts, entrepreneurs, and fellow enthusiasts to expand your network.
+            </p>
+          </div>
+          <div className="initiative-card">
+            <div className="initiative-icon">💻</div>
+            <h3 className="initiative-title">Hackathons</h3>
+            <p className="initiative-description">
+              Engage in collaborative projects and compete in hackathons to showcase your skills and creativity.
+            </p>
+          </div>
         </div>
       </div>
     </section>
 
-    <section className="py-16 bg-cu-gold">
-      <div className="container mx-auto px-4 text-center">
-        <h2 className="text-3xl font-bold text-black mb-6">Join Us Today!</h2>
-        <p className="text-black mb-8">
-          Become a part of our vibrant community and start your journey with
-          blockchain technology.
-        </p>
-        <a
-          href="/Join"
-          className="px-6 py-3 bg-black text-cu-gold font-semibold rounded-full hover:bg-gray-800 transition duration-300"
-        >
-          Join Today
-        </a>
+    {/* CTA Section */}
+    <section className="cta-section">
+      <div className="container-dark text-center">
+        <div className="cta-card">
+          <h2 className="cta-heading">
+            Join Us <span className="gold-gradient">Today!</span>
+          </h2>
+          <p className="cta-text">
+            Become a part of our vibrant community and start your journey with
+            blockchain technology.
+          </p>
+          <a href="/Join" className="cta-button">
+            Join Today
+            <svg className="button-arrow" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 7l5 5m0 0l-5 5m5-5H6" />
+            </svg>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    {/* Stats Section */}
+    <section className="section-dark">
+      <div className="container-dark">
+        <div className="stats-grid">
+          <div className="stat-card">
+            <div className="stat-number">100+</div>
+            <div className="stat-label">Active Members</div>
+          </div>
+          <div className="stat-card">
+            <div className="stat-number">50+</div>
+            <div className="stat-label">Events Hosted</div>
+          </div>
+          <div className="stat-card">
+            <div className="stat-number">10+</div>
+            <div className="stat-label">Industry Partners</div>
+          </div>
+          <div className="stat-card">
+            <div className="stat-number">5+</div>
+            <div className="stat-label">Hackathon Wins</div>
+          </div>
+        </div>
       </div>
     </section>
   </div>

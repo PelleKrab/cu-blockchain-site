@@ -1,84 +1,112 @@
 import React from "react";
-import { Background } from "../assets/Flatirons_WInter_Sunrise_banner.jpg"
+import "../styles/JoinDark.css";
 
 const Join: React.FC = () => {
   return (
-    <div className="flex flex-col">
-      <div className = "flex flex-col h-[30rem]">
-      <section
-        className="relative bg-[center_bottom_30%] bg-flatirons bg-cover bg-no-repeat h-full flex items-center justify-center text-center px-4"
-      >
-        <div className="absolute inset-0 bg-black opacity-50"></div>
-
-        <div className="relative z-10">
-          <h1 className="text-4xl sm:text-5xl font-bold text-white">Join Us</h1>
-        </div>
-      </section>
+    <div className="join-dark-theme">
+      {/* Animated Background */}
+      <div className="animated-background">
+        <div className="gradient-sphere sphere-1"></div>
+        <div className="gradient-sphere sphere-2"></div>
+        <div className="gradient-sphere sphere-3"></div>
       </div>
-      <section className="py-16 bg-white">
-        <div className="container mx-auto px-4 text-center">
-          <h2 className="text-3xl font-bold text-cu-gold mb-6">
-            Connect with Our Community
+
+      {/* Hero Section */}
+      <div className="hero-dark">
+        <section className="hero-content-dark">
+          <div className="hero-overlay"></div>
+          <div className="hero-text">
+            <h1 className="hero-title-dark">
+              Join <span className="gold-gradient">Us</span>
+            </h1>
+          </div>
+        </section>
+      </div>
+
+      {/* Connect with Community Section */}
+      <section className="section-dark">
+        <div className="container-dark text-center">
+          <h2 className="section-heading-center">
+            Connect with Our <span className="gold-gradient">Community</span>
           </h2>
-          <p className="text-cu-dark-gray text-lg mb-8">
+          <p className="body-text-center mb-large">
             Join our Telegram group to stay updated with the latest news,
             events, and discussions. Engage with fellow blockchain enthusiasts
             and be a part of our growing community.
           </p>
           <a
-            href="https://t.me/yourtelegramgroup"
+            href="https://t.me/cublockchain"
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-flex items-center px-6 py-3 bg-cu-gold text-black font-semibold rounded-full hover:bg-yellow-500 transition duration-300"
+            className="join-button"
           >
+            <svg className="telegram-icon" fill="currentColor" viewBox="0 0 24 24">
+              <path d="M12 0C5.373 0 0 5.373 0 12s5.373 12 12 12 12-5.373 12-12S18.627 0 12 0zm5.894 8.221l-1.97 9.28c-.145.658-.537.818-1.084.508l-3-2.21-1.446 1.394c-.14.18-.357.295-.6.295-.002 0-.003 0-.005 0l.213-3.054 5.56-5.022c.24-.213-.054-.334-.373-.121l-6.869 4.326-2.96-.924c-.64-.203-.654-.64.135-.954l11.566-4.458c.538-.196 1.006.128.832.941z"/>
+            </svg>
             Join Telegram
           </a>
         </div>
       </section>
 
-      <section className="py-16 bg-gray-50">
-        <div className="container mx-auto px-4">
-          <h2 className="text-3xl font-bold text-center text-cu-gold mb-12">
-            Weekly Meetings
+      {/* Weekly Meetings Section */}
+      <section className="section-dark">
+        <div className="container-dark">
+          <h2 className="section-heading-center">
+            Weekly <span className="gold-gradient">Meetings</span>
           </h2>
-          <div className="flex flex-col md:flex-row items-center">
-            <div className="md:w-1/2 md:pr-12">
-              <h3 className="text-2xl font-semibold text-cu-dark-gray mb-4">
-                What to Expect
-              </h3>
-              <p className="text-cu-dark-gray text-lg mb-4">
+          <div className="two-col-layout">
+            <div className="text-col">
+              <h3 className="subsection-heading">What to Expect</h3>
+              <p className="body-text mb-4">
                 Our weekly meetings are a platform for learning, collaboration,
-                and innovation. Session may include:
+                and innovation. Sessions may include:
               </p>
-              <ul className="list-disc list-inside text-cu-dark-gray text-lg">
-                <li>Guest Speaker Presentations</li>
-                <li>Hands-On Workshops</li>
-                <li>Project Showcases</li>
-                <li>Networking Opportunities</li>
-                <li>Discussions</li>
+              <ul className="features-list">
+                <li>
+                  <span className="list-icon">🎤</span>
+                  <span>Guest Speaker Presentations</span>
+                </li>
+                <li>
+                  <span className="list-icon">💻</span>
+                  <span>Hands-On Workshops</span>
+                </li>
+                <li>
+                  <span className="list-icon">🚀</span>
+                  <span>Project Showcases</span>
+                </li>
+                <li>
+                  <span className="list-icon">🤝</span>
+                  <span>Networking Opportunities</span>
+                </li>
+                <li>
+                  <span className="list-icon">💬</span>
+                  <span>Community Discussions</span>
+                </li>
               </ul>
             </div>
-            <div className="md:w-1/2 mt-8 md:mt-0">
-              <h3 className="text-2xl font-semibold text-cu-dark-gray mb-4">
-                Meeting Schedule
-              </h3>
-              <div className="bg-white p-6 rounded-lg shadow-md">
-                <p className="text-cu-dark-gray text-lg mb-2">
-                  <strong>Day:</strong> Every Monday
-                </p>
-                <p className="text-cu-dark-gray text-lg mb-2">
-                  <strong>Time:</strong> 6:00 PM - 7:00 PM
-                </p>
-                <p className="text-cu-dark-gray text-lg">
-                  <strong>Location:</strong> ECCR 131
-                </p>
+            <div className="schedule-col">
+              <h3 className="subsection-heading">Meeting Schedule</h3>
+              <div className="schedule-card">
+                <div className="schedule-item">
+                  <div className="schedule-label">Day</div>
+                  <div className="schedule-value">Every Monday</div>
+                </div>
+                <div className="schedule-divider"></div>
+                <div className="schedule-item">
+                  <div className="schedule-label">Time</div>
+                  <div className="schedule-value">6:00 PM - 7:00 PM</div>
+                </div>
+                <div className="schedule-divider"></div>
+                <div className="schedule-item">
+                  <div className="schedule-label">Location</div>
+                  <div className="schedule-value">ECCR 131</div>
+                </div>
               </div>
             </div>
           </div>
         </div>
       </section>
-
-      </div>
+    </div>
   );
 };
 
