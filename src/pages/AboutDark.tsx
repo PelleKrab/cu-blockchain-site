@@ -1,8 +1,8 @@
 import React from "react";
 import ClubActivities from "../assets/club-activities.jpg";
-import PellePFP from "../assets/pelle_pfp.jpg";
-import VamsiPFP from "../assets/vamsi_pfp.jpg";
-import Redacted from "../assets/redacted.png";
+import BrockPFP from "../assets/Brock.jpg";
+import JackPFP from "../assets/Jack.jpg";
+import TylerPFP from "../assets/Tyler.jpg";
 import MicrosoftLogo from "../assets/microsoft-logo.png";
 import CoinbaseLogo from "../assets/coinbase-logo.png";
 import OptiverLogo from "../assets/optiver-logo.png";
@@ -72,29 +72,29 @@ const About: React.FC = () => (
         <div className="team-grid-dark">
           <div className="team-member-card">
             <img
-              src={PellePFP}
-              alt="Pelle"
+              src={BrockPFP}
+              alt="Brock"
               className="member-photo"
             />
-            <h3 className="member-name">Pelle</h3>
-            <p className="member-role">President</p>
+            <h3 className="member-name">Brock</h3>
+            <p className="member-role">Co-President</p>
           </div>
           <div className="team-member-card">
             <img
-              src={VamsiPFP}
-              alt="Vamsi"
+              src={JackPFP}
+              alt="Jack"
               className="member-photo"
             />
-            <h3 className="member-name">Vamsi</h3>
-            <p className="member-role">Vice President</p>
+            <h3 className="member-name">Jack</h3>
+            <p className="member-role">Co-President</p>
           </div>
           <div className="team-member-card">
             <img
-              src={Redacted}
-              alt="Gavin"
+              src={TylerPFP}
+              alt="Tyler"
               className="member-photo"
             />
-            <h3 className="member-name">Gavin</h3>
+            <h3 className="member-name">Tyler</h3>
             <p className="member-role">Treasurer</p>
           </div>
         </div>
