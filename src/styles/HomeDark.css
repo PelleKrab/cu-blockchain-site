@@ -2,13 +2,41 @@
 
 .home-dark-theme {
   min-height: 100vh;
-  background: linear-gradient(135deg, #0a0a0a 0%, #1a1a2e 100%);
+  background:
+    linear-gradient(180deg,
+      rgba(10, 10, 10, 1) 0%,
+      rgba(12, 12, 15, 1) 10%,
+      rgba(14, 14, 20, 1) 20%,
+      rgba(16, 16, 25, 1) 30%,
+      rgba(18, 18, 30, 1) 40%,
+      rgba(20, 20, 35, 1) 50%,
+      rgba(21, 21, 38, 1) 60%,
+      rgba(22, 22, 40, 1) 70%,
+      rgba(24, 24, 43, 1) 80%,
+      rgba(25, 25, 45, 1) 90%,
+      rgba(26, 26, 46, 1) 100%
+    );
   color: #ffffff;
   position: relative;
   overflow-x: hidden;
   padding: 0;
   margin: 0;
   padding-top: 64px; /* Account for fixed navbar (h-16 = 64px) */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.home-dark-theme::before {
+  content: '';
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='3' numOctaves='4' /%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E");
+  opacity: 0.05;
+  pointer-events: none;
+  z-index: 1;
 }
 
 /* Animated Background */
@@ -20,53 +48,89 @@
   height: 100%;
   z-index: 0;
   pointer-events: none;
+  overflow: hidden;
 }
 
-.gradient-sphere {
+/* Mountain Layers */
+.mountain-layer {
   position: absolute;
-  border-radius: 50%;
-  filter: blur(80px);
-  opacity: 0.3;
-  animation: float 20s infinite ease-in-out;
+  bottom: 0;
+  left: 0;
+  width: 200%;
+  height: 100%;
+  background-repeat: repeat-x;
+  background-position: bottom;
+  background-size: auto 100%;
 }
 
-.sphere-1 {
-  width: 400px;
-  height: 400px;
-  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-  top: 10%;
-  left: 10%;
-  animation-delay: 0s;
+.mountain-layer-1 {
+  opacity: 0.15;
+  animation: slideLeft 120s linear infinite;
+  background-image:
+    polygon(
+      0% 70%, 10% 50%, 20% 60%, 30% 40%, 40% 55%, 50% 35%,
+      60% 50%, 70% 30%, 80% 45%, 90% 25%, 100% 40%,
+      110% 30%, 120% 45%, 130% 25%, 140% 40%, 150% 30%,
+      160% 45%, 170% 30%, 180% 50%, 190% 35%, 200% 45%,
+      200% 100%, 0% 100%
+    );
+  background: linear-gradient(to bottom,
+    transparent 0%,
+    rgba(102, 126, 234, 0.15) 30%,
+    rgba(102, 126, 234, 0.2) 100%
+  );
+  clip-path: polygon(
+    0% 70%, 10% 50%, 20% 60%, 30% 40%, 40% 55%, 50% 35%,
+    60% 50%, 70% 30%, 80% 45%, 90% 25%, 100% 40%,
+    110% 30%, 120% 45%, 130% 25%, 140% 40%, 150% 30%,
+    160% 45%, 170% 30%, 180% 50%, 190% 35%, 200% 45%,
+    200% 100%, 0% 100%
+  );
 }
 
-.sphere-2 {
-  width: 300px;
-  height: 300px;
-  background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
-  bottom: 20%;
-  right: 15%;
-  animation-delay: 5s;
+.mountain-layer-2 {
+  opacity: 0.2;
+  animation: slideLeft 80s linear infinite;
+  background: linear-gradient(to bottom,
+    transparent 0%,
+    rgba(79, 172, 254, 0.2) 40%,
+    rgba(79, 172, 254, 0.25) 100%
+  );
+  clip-path: polygon(
+    0% 75%, 8% 60%, 16% 70%, 24% 55%, 32% 65%, 40% 50%,
+    48% 60%, 56% 45%, 64% 58%, 72% 42%, 80% 55%,
+    88% 40%, 96% 52%, 104% 38%, 112% 50%, 120% 35%,
+    128% 48%, 136% 40%, 144% 55%, 152% 45%, 160% 58%,
+    168% 42%, 176% 53%, 184% 40%, 192% 52%, 200% 48%,
+    200% 100%, 0% 100%
+  );
 }
 
-.sphere-3 {
-  width: 350px;
-  height: 350px;
-  background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  animation-delay: 10s;
+.mountain-layer-3 {
+  opacity: 0.25;
+  animation: slideLeft 50s linear infinite;
+  background: linear-gradient(to bottom,
+    transparent 0%,
+    rgba(244, 208, 63, 0.15) 50%,
+    rgba(244, 208, 63, 0.2) 100%
+  );
+  clip-path: polygon(
+    0% 80%, 7% 68%, 14% 75%, 21% 65%, 28% 72%, 35% 60%,
+    42% 68%, 49% 55%, 56% 65%, 63% 52%, 70% 62%,
+    77% 50%, 84% 60%, 91% 48%, 98% 58%, 105% 45%,
+    112% 56%, 119% 48%, 126% 60%, 133% 52%, 140% 62%,
+    147% 50%, 154% 60%, 161% 52%, 168% 62%, 175% 55%,
+    182% 63%, 189% 53%, 196% 60%, 200% 58%,
+    200% 100%, 0% 100%
+  );
 }
 
-@keyframes float {
-  0%, 100% {
-    transform: translate(0, 0);
+@keyframes slideLeft {
+  0% {
+    transform: translateX(0);
   }
-  33% {
-    transform: translate(30px, -30px);
-  }
-  66% {
-    transform: translate(-30px, 30px);
+  100% {
+    transform: translateX(-50%);
   }
 }
 
@@ -202,6 +266,8 @@
   position: relative;
   padding: 80px 20px;
   z-index: 1;
+  background: transparent;
+  border: none;
 }
 
 .container-dark {
@@ -233,7 +299,7 @@
 .home-dark-theme .initiative-card {
   background: rgba(255, 255, 255, 0.05) !important;
   backdrop-filter: blur(10px) !important;
-  border: 1px solid rgba(255, 255, 255, 0.1) !important;
+  border: none !important;
   border-radius: 16px !important;
   padding: 3rem 2rem !important;
   text-align: center !important;
@@ -287,7 +353,7 @@
 .home-dark-theme .stat-card {
   background: rgba(255, 255, 255, 0.05) !important;
   backdrop-filter: blur(10px) !important;
-  border: 1px solid rgba(255, 255, 255, 0.1) !important;
+  border: none !important;
   border-radius: 16px !important;
   padding: 2.5rem 1.5rem !important;
   text-align: center !important;
@@ -330,7 +396,7 @@
   position: relative;
   padding: 80px 20px;
   z-index: 1;
-  background: rgba(255, 255, 255, 0.02);
+  background: transparent;
 }
 
 .cta-card {
@@ -339,7 +405,7 @@
   padding: 3rem 2rem;
   background: rgba(255, 255, 255, 0.05);
   backdrop-filter: blur(10px);
-  border: 1px solid rgba(255, 255, 255, 0.1);
+  border: none;
   border-radius: 16px;
 }
 

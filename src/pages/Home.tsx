@@ -5,9 +5,9 @@ const Home: React.FC = () => (
   <div className="home-dark-theme">
     {/* Animated Background */}
     <div className="animated-background">
-      <div className="gradient-sphere sphere-1"></div>
-      <div className="gradient-sphere sphere-2"></div>
-      <div className="gradient-sphere sphere-3"></div>
+      <div className="mountain-layer mountain-layer-1"></div>
+      <div className="mountain-layer mountain-layer-2"></div>
+      <div className="mountain-layer mountain-layer-3"></div>
     </div>
 
     {/* Hero Section */}
@@ -77,30 +77,6 @@ const Home: React.FC = () => (
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 7l5 5m0 0l-5 5m5-5H6" />
             </svg>
           </a>
-        </div>
-      </div>
-    </section>
-
-    {/* Stats Section */}
-    <section className="section-dark">
-      <div className="container-dark">
-        <div className="stats-grid">
-          <div className="stat-card">
-            <div className="stat-number">100+</div>
-            <div className="stat-label">Active Members</div>
-          </div>
-          <div className="stat-card">
-            <div className="stat-number">50+</div>
-            <div className="stat-label">Events Hosted</div>
-          </div>
-          <div className="stat-card">
-            <div className="stat-number">10+</div>
-            <div className="stat-label">Industry Partners</div>
-          </div>
-          <div className="stat-card">
-            <div className="stat-number">5+</div>
-            <div className="stat-label">Hackathon Wins</div>
-          </div>
         </div>
       </div>
     </section>

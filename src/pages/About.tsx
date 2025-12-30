@@ -1,5 +1,5 @@
 import React from "react";
-import ClubActivities from "../assets/club-activities.jpg";
+import AboutUs from "../assets/AboutUs.jpg";
 import BrockPFP from "../assets/Brock.jpg";
 import JackPFP from "../assets/Jack.jpg";
 import TylerPFP from "../assets/Tyler.jpg";
@@ -15,21 +15,9 @@ const About: React.FC = () => (
   <div className="about-dark-theme">
     {/* Animated Background */}
     <div className="animated-background">
-      <div className="gradient-sphere sphere-1"></div>
-      <div className="gradient-sphere sphere-2"></div>
-      <div className="gradient-sphere sphere-3"></div>
-    </div>
-
-    {/* Hero Section */}
-    <div className="hero-dark">
-      <section className="hero-content-dark">
-        <div className="hero-overlay"></div>
-        <div className="hero-text">
-          <h1 className="hero-title-dark">
-            About <span className="gold-gradient">Us</span>
-          </h1>
-        </div>
-      </section>
+      <div className="mountain-layer mountain-layer-1"></div>
+      <div className="mountain-layer mountain-layer-2"></div>
+      <div className="mountain-layer mountain-layer-3"></div>
     </div>
 
     {/* Who We Are Section */}
@@ -38,8 +26,8 @@ const About: React.FC = () => (
         <div className="two-col-layout">
           <div className="image-col">
             <img
-              src={ClubActivities}
-              alt="Club Activities"
+              src={AboutUs}
+              alt="About Us"
               className="feature-image"
             />
           </div>

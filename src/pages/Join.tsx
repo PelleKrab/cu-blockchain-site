@@ -6,25 +6,13 @@ const Join: React.FC = () => {
     <div className="join-dark-theme">
       {/* Animated Background */}
       <div className="animated-background">
-        <div className="gradient-sphere sphere-1"></div>
-        <div className="gradient-sphere sphere-2"></div>
-        <div className="gradient-sphere sphere-3"></div>
-      </div>
-
-      {/* Hero Section */}
-      <div className="hero-dark">
-        <section className="hero-content-dark">
-          <div className="hero-overlay"></div>
-          <div className="hero-text">
-            <h1 className="hero-title-dark">
-              Join <span className="gold-gradient">Us</span>
-            </h1>
-          </div>
-        </section>
+        <div className="mountain-layer mountain-layer-1"></div>
+        <div className="mountain-layer mountain-layer-2"></div>
+        <div className="mountain-layer mountain-layer-3"></div>
       </div>
 
       {/* Connect with Community Section */}
-      <section className="section-dark">
+      <section className="section-dark hero-section">
         <div className="container-dark text-center">
           <h2 className="section-heading-center">
             Connect with Our <span className="gold-gradient">Community</span>
@@ -101,6 +89,96 @@ const Join: React.FC = () => {
                   <div className="schedule-label">Location</div>
                   <div className="schedule-value">ECCR 131</div>
                 </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Contact Section */}
+      <section className="section-dark">
+        <div className="container-dark">
+          <h2 className="section-heading-center">
+            Get in <span className="gold-gradient">Touch</span>
+          </h2>
+          <p className="body-text-center mb-large">
+            Have questions or want to connect? Reach out to our team members directly!
+          </p>
+
+          {/* Club Social Media */}
+          <div className="contact-card club-contact">
+            <h3 className="contact-heading">Club Social Media</h3>
+            <div className="social-links">
+              <a
+                href="https://twitter.com/cublockchain_"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="social-link"
+              >
+                <svg className="social-icon" fill="currentColor" viewBox="0 0 24 24">
+                  <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/>
+                </svg>
+                @cublockchain_
+              </a>
+            </div>
+          </div>
+
+          {/* Team Contacts */}
+          <div className="team-contacts-grid">
+            <div className="contact-card">
+              <h3 className="contact-name">Brock</h3>
+              <p className="contact-role">Co-President</p>
+              <div className="contact-links">
+                <a href="mailto:brock.benton@colorado.edu" className="contact-link">
+                  <svg className="contact-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+                  </svg>
+                  brock.benton@colorado.edu
+                </a>
+                <a href="https://twitter.com/brock4bc" target="_blank" rel="noopener noreferrer" className="contact-link">
+                  <svg className="contact-icon" fill="currentColor" viewBox="0 0 24 24">
+                    <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/>
+                  </svg>
+                  @brock4bc
+                </a>
+              </div>
+            </div>
+
+            <div className="contact-card">
+              <h3 className="contact-name">Jack</h3>
+              <p className="contact-role">Co-President</p>
+              <div className="contact-links">
+                <a href="mailto:jabr2451@colorado.edu" className="contact-link">
+                  <svg className="contact-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+                  </svg>
+                  jabr2451@colorado.edu
+                </a>
+                <a href="https://twitter.com/Jack_Brehmer" target="_blank" rel="noopener noreferrer" className="contact-link">
+                  <svg className="contact-icon" fill="currentColor" viewBox="0 0 24 24">
+                    <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/>
+                  </svg>
+                  @Jack_Brehmer
+                </a>
+              </div>
+            </div>
+
+            <div className="contact-card">
+              <h3 className="contact-name">Tyler</h3>
+              <p className="contact-role">Treasurer</p>
+              <div className="contact-links">
+                <a href="mailto:tyma5370@colorado.edu" className="contact-link">
+                  <svg className="contact-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+                  </svg>
+                  tyma5370@colorado.edu
+                </a>
+                <a href="https://twitter.com/TylerMarticnfd" target="_blank" rel="noopener noreferrer" className="contact-link">
+                  <svg className="contact-icon" fill="currentColor" viewBox="0 0 24 24">
+                    <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/>
+                  </svg>
+                  @TylerMarticnfd
+                </a>
               </div>
             </div>
           </div>

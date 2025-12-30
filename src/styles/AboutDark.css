@@ -299,12 +299,13 @@
   height: auto;
   max-height: 80px;
   object-fit: contain;
-  filter: grayscale(100%) brightness(2);
-  transition: filter 0.3s ease;
+  filter: none;
+  transition: filter 0.3s ease, transform 0.3s ease;
 }
 
 .company-logo-card:hover .logo-image {
-  filter: grayscale(0%) brightness(1);
+  filter: brightness(1.1);
+  transform: scale(1.05);
 }
 
 /* Hackathon Section */

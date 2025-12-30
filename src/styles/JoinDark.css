@@ -120,6 +120,14 @@
   z-index: 1;
 }
 
+.hero-section {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-top: 64px; /* Account for navbar */
+}
+
 .container-dark {
   max-width: 1200px;
   margin: 0 auto;
@@ -283,7 +291,125 @@
   margin: 0;
 }
 
+/* Contact Section */
+.contact-card {
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 16px;
+  padding: 2rem;
+  margin-bottom: 2rem;
+}
+
+.club-contact {
+  text-align: center;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 3rem;
+}
+
+.contact-heading {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: #f4d03f;
+  margin-bottom: 1.5rem;
+}
+
+.social-links {
+  display: flex;
+  justify-content: center;
+  gap: 1.5rem;
+}
+
+.social-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.75rem 1.5rem;
+  background: rgba(29, 161, 242, 0.1);
+  color: #1DA1F2;
+  border: 1px solid rgba(29, 161, 242, 0.3);
+  border-radius: 50px;
+  text-decoration: none;
+  font-size: 1.125rem;
+  font-weight: 500;
+  transition: all 0.3s ease;
+}
+
+.social-link:hover {
+  background: rgba(29, 161, 242, 0.2);
+  transform: translateY(-2px);
+  box-shadow: 0 10px 20px rgba(29, 161, 242, 0.2);
+}
+
+.social-icon {
+  width: 20px;
+  height: 20px;
+}
+
+.team-contacts-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.contact-name {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: #ffffff;
+  margin-bottom: 0.5rem;
+}
+
+.contact-role {
+  color: #f4d03f;
+  font-size: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+.contact-links {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.contact-link {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 0.75rem 1rem;
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 8px;
+  color: #d1d5db;
+  text-decoration: none;
+  font-size: 0.95rem;
+  transition: all 0.3s ease;
+}
+
+.contact-link:hover {
+  background: rgba(255, 255, 255, 0.08);
+  border-color: rgba(244, 208, 63, 0.3);
+  color: #ffffff;
+  transform: translateX(5px);
+}
+
+.contact-icon {
+  width: 18px;
+  height: 18px;
+  flex-shrink: 0;
+}
+
 /* Responsive Adjustments */
+@media (max-width: 1024px) {
+  .team-contacts-grid {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+}
+
 @media (max-width: 768px) {
   .section-heading-center {
     font-size: 2rem;
@@ -299,5 +425,13 @@
 
   .schedule-value {
     font-size: 1.25rem;
+  }
+
+  .team-contacts-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .contact-link {
+    font-size: 0.875rem;
   }
 }
