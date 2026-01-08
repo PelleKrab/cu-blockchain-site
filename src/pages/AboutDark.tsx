@@ -132,7 +132,7 @@ const About: React.FC = () => (
                 className="logo-image"
               />
             </div>
-            <div className="company-logo-card centered-logo">
+            <div className="company-logo-card">
               <img
                 src={GalaxyDigitalLogo}
                 alt="Galaxy Digital"
